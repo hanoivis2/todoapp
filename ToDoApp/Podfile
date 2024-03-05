@@ -6,6 +6,5 @@ target 'ToDoApp' do
   use_frameworks!
 
   # Pods for ToDoApp
-pod 'Alamofire'
 
 end
