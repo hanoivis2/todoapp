@@ -10,13 +10,14 @@ import SwiftUI
 struct ContentView: View {
     
     @EnvironmentObject var dataStore: DataStore
+    @State private var modalType: ModalType? = nil
     
     var body: some View {
         NavigationView {
             List() {
                 ForEach(dataStore.toDos) { toDo in
                     Button {
-                        print("Button hitted")
+                        modalType = .update(toDo)
                     } label: {
                         Text(toDo.name)
                             .font(.title3)
@@ -24,6 +25,9 @@ struct ContentView: View {
                             .foregroundColor(toDo.completed ? .green : Color(.label))
                     }
                 }
+                .onDelete(perform: { indexSet in
+                    dataStore.deleteToDo(at: indexSet)
+                })
             }
             .listStyle(InsetGroupedListStyle())
             .toolbar {
@@ -34,12 +38,13 @@ struct ContentView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
-                        
+                        modalType = .new
                     } label: {
                         Image(systemName: "plus.circle.fill")
                     }
                 }
             }
+            .sheet(item: $modalType) { $0 }
         }
     }
 }
@@ -50,6 +55,4 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(DataStore())
     }
 }
-//#Preview {
-//    ContentView()
-//}
+
