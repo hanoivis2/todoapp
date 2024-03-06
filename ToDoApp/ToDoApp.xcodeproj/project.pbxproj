@@ -17,6 +17,7 @@
 		F5BDBDC32B9808CD002AE772 /* ToDoFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDBDC22B9808CD002AE772 /* ToDoFormViewModel.swift */; };
 		F5BDBDC52B980AED002AE772 /* ToDoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDBDC42B980AED002AE772 /* ToDoFormView.swift */; };
 		F5BDBDC72B981A52002AE772 /* ModalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDBDC62B981A51002AE772 /* ModalType.swift */; };
+		F5BDBDCA2B982532002AE772 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BDBDC92B982532002AE772 /* FileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		F5BDBDC22B9808CD002AE772 /* ToDoFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFormViewModel.swift; sourceTree = "<group>"; };
 		F5BDBDC42B980AED002AE772 /* ToDoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFormView.swift; sourceTree = "<group>"; };
 		F5BDBDC62B981A51002AE772 /* ModalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalType.swift; sourceTree = "<group>"; };
+		F5BDBDC92B982532002AE772 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +87,13 @@
 		F565EF892B970BD3004F72D6 /* ToDoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F5BDBDC82B982520002AE772 /* Extension */,
 				F5BDBDC12B980896002AE772 /* Models */,
 				F5BDBDC02B980889002AE772 /* Views */,
 				F5BDBDBF2B980882002AE772 /* ViewModels */,
 				F565EF8A2B970BD3004F72D6 /* ToDoApp.swift */,
 				F565EF8E2B970BDD004F72D6 /* Assets.xcassets */,
 				F565EF902B970BDD004F72D6 /* Preview Content */,
-				F565EF9A2B97141A004F72D6 /* DataStore.swift */,
 			);
 			path = ToDoApp;
 			sourceTree = "<group>";
@@ -107,6 +109,7 @@
 		F5BDBDBF2B980882002AE772 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				F565EF9A2B97141A004F72D6 /* DataStore.swift */,
 				F5BDBDC22B9808CD002AE772 /* ToDoFormViewModel.swift */,
 			);
 			path = ViewModels;
@@ -128,6 +131,14 @@
 				F5BDBDC62B981A51002AE772 /* ModalType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F5BDBDC82B982520002AE772 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F5BDBDC92B982532002AE772 /* FileManager.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +244,7 @@
 				F565EF8D2B970BD3004F72D6 /* ContentView.swift in Sources */,
 				F565EF8B2B970BD3004F72D6 /* ToDoApp.swift in Sources */,
 				F5BDBDC32B9808CD002AE772 /* ToDoFormViewModel.swift in Sources */,
+				F5BDBDCA2B982532002AE772 /* FileManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
